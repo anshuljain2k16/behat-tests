@@ -14,4 +14,5 @@ dependencies:
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
     - composer global require drush/drush
-    - which drush
+    - cd $HOME/.composer/vendor/bin
+    - ls -ll
