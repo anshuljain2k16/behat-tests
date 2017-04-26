@@ -3,7 +3,7 @@ machine:
     UTC
 test:
   pre:
-
+    #- mv behat.local.yml.sample behat.local.yml
   override:
     - ./bin/drush sa
     - mkdir $CIRCLE_TEST_REPORTS/behat
