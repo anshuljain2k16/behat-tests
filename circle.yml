@@ -7,7 +7,7 @@ test:
   override:
     - ./bin/drush sa
     - mkdir $CIRCLE_TEST_REPORTS/behat
-    - ./bin/behat features/term.feature --format junit --out $CIRCLE_TEST_REPORTS/behat   
+    - ./bin/behat --format junit --out $CIRCLE_TEST_REPORTS/behat   
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
