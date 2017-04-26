@@ -5,10 +5,10 @@ test:
   pre:
     #- mv behat.local.yml.sample behat.local.yml
   override:
-    - drush sa
+    - ./bin/drush sa
     - mkdir $CIRCLE_TEST_REPORTS/behat
     - ./bin/behat   
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
-    - echo $"export PATH=\$PATH:$(pwd)" >> ~/.composer/vendor/drush/drush
+    - echo " cd ./bin;ls -ll;"
