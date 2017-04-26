@@ -9,11 +9,10 @@ test:
   override:
     - drush sa
     - mkdir $CIRCLE_TEST_REPORTS/behat
-    - ./bin/behat   
+    - ./bin/behat
+    - ls -d /home/ubuntu/.composer/vendor;
+    - ls -d $HOME/.composer/vendor/bin/*/
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
     - composer global require drush/drush
-    - chmod -R 777 /home/ubuntu/.composer/vendor/bin
-    - cd /home/ubuntu/.composer/vendor/bin/drush; ls -ll;
-    - ls -d $HOME/.composer/vendor/bin/*/
