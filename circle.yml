@@ -10,7 +10,7 @@ test:
     - drush sa
     - mkdir $CIRCLE_TEST_REPORTS/behat
     - ./bin/behat
-    - ls /usr/local/share/drush
+    - ls -lR | more
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
