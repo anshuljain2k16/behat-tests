@@ -11,4 +11,4 @@ test:
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
-    - echo " cd ./bin;ls -ll;"
+    - echo "pwd"
