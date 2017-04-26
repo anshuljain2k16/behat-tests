@@ -11,4 +11,4 @@ test:
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
-    - echo $"export PATH=\$PATH:$(pwd)" >> ~/.bin
+    - echo $"export PATH=\$PATH:$(pwd)" >> ~/.composer/vendor/drush/drush
