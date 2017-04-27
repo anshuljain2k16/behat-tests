@@ -13,5 +13,4 @@ test:
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
-    - composer global require pantheon-systems/terminus
     - composer global require drush/drush
