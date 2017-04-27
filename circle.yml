@@ -26,6 +26,9 @@ dependencies:
     - composer global require pantheon-systems/terminus
 
     # Getting site aliases ready for use.
-    - mv pantheon.aliases.drushrc.php ./.drush
+    #- mv pantheon.aliases.drushrc.php ~/.drush
 
-    - pwd | ls -ll
+    #- pwd | ls -ll
+  post:
+    - cp pantheon.aliases.drushrc.php ./.drush
+    - cp pantheon.aliases.drushrc.php ~/.drush
