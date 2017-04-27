@@ -16,8 +16,8 @@ dependencies:
 
     # Install Drush.
     - composer global require drush/drush:7.*
-    - drush cc drush    
+    - export PATH="$HOME/.composer/vendor/bin:$PATH"
  
     # Install Terminus.
-    - composer global require pantheon-systems/terminus
+    #- composer global require pantheon-systems/terminus
     
