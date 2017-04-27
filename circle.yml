@@ -1,24 +1,25 @@
 machine:
   environment:
-    PATH: "$HOME/.composer/vendor/bin:$PATH"
+    #PATH: "$HOME/.composer/vendor/bin:$PATH"
   timezone:
     UTC
 test:
   pre:
     #- mv behat.local.yml.sample behat.local.yml
-    - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
   override:
     #- mkdir $CIRCLE_TEST_REPORTS/behat
     - ./bin/behat
+    - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
 
     # Install Drush.
     - composer global require drush/drush:6.2.0
-
+    - export PATH="$HOME/.composer/vendor/bin:$PATH"
+ 
     # Install Terminus.
-    #- git clone git@github.com:pantheon-systems/terminus.git $HOME/.drush/terminus
-    #- cd $HOME/.drush/terminus
-    #- composer update --no-dev
-    #- drush cc drush
+    - git clone git@github.com:pantheon-systems/terminus.git $HOME/.drush/terminus
+    - cd $HOME/.drush/terminus
+    - composer update --no-dev
+    - drush cc drush
