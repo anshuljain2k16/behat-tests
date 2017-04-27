@@ -43,7 +43,10 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
      */
     public function iCheckForTaxonomy2($arg1)
     {
-       
+       var_dump("tete");
+       for($i=0; $i<10; $i++) {
+        
+       }
         //$tt = $this->getUserManager()->getCurrentUser();
         //$term = $this->getCore()->loadTaxonomyTermByName("url_builder", "Social Share");
     }
