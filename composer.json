@@ -1,5 +1,7 @@
 {
-    "require": {
+    "require-global": {
+        "drush/drush": "7.*",
+        "pantheon-systems/terminus": "^1.2",
         "kolev/multilingual-extension": "dev-master",
         "behat/environment-loader": "1.*",
         "beberlei/assert": "^2.7"
@@ -15,10 +17,10 @@
         "behat/symfony2-extension": "^2.1"
     },
     "autoload": {
-        "psr-4": {
-          "kolev\\MultilingualExtension\\": "src/"
-        }
-    },
+    "psr-4": {
+      "kolev\\MultilingualExtension\\": "src/"
+    }
+  },
     "config": {
         "bin-dir": "bin"
     }
