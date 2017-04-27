@@ -19,5 +19,5 @@ dependencies:
     - drush cc drush    
  
     # Install Terminus.
-     - composer global require pantheon-systems/terminus
+    - composer global require pantheon-systems/terminus
     
