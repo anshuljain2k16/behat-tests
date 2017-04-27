@@ -6,6 +6,7 @@ machine:
 test:
   pre:
     #- mv behat.local.yml.sample behat.local.yml
+    - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
   override:
     #- mkdir $CIRCLE_TEST_REPORTS/behat
     - ./bin/behat
@@ -22,10 +23,3 @@ dependencies:
     - cd $HOME/.drush/terminus
     - composer update --no-dev
     - drush cc drush
-
-    # Getting site aliases ready for use.
-    #- mv pantheon.aliases.drushrc.php ~/.drush
-
-    #- pwd | ls -ll
-  post:
-    - cp behat-tests/pantheon.aliases.drushrc.php ./.drush
