@@ -26,3 +26,5 @@ dependencies:
 
     # Getting site aliases ready for use.
     - mv pantheon.aliases.drushrc.php ./.drush
+
+    - pwd
