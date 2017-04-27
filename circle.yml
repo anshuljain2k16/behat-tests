@@ -7,7 +7,6 @@ test:
   pre:
     #- mv behat.local.yml.sample behat.local.yml
   override:
-    - drush sa
     #- mkdir $CIRCLE_TEST_REPORTS/behat
     - ./bin/behat
 dependencies: 
@@ -15,13 +14,14 @@ dependencies:
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
 
     # Install Drush.
-    - composer global require drush/drush
+    - composer global require drush/drush:6.2.0
  
     # Install Terminus.
     #- git clone git@github.com:pantheon-systems/terminus.git $HOME/.drush/terminus
-    #- cd $HOME/.drush/terminus
-    #- composer update --no-dev
-    #- drush cc drush
+    - cd $HOME/.drush/terminus
+    - composer update --no-dev
+    - drush cc drush
+    
     - composer global require pantheon-systems/terminus
 
     # Getting site aliases ready for use.
@@ -29,5 +29,4 @@ dependencies:
 
     #- pwd | ls -ll
   post:
-    - cp pantheon.aliases.drushrc.php ./.drush
-    - cp pantheon.aliases.drushrc.php ~/.drush
+    - cp behat-tests/pantheon.aliases.drushrc.php ./.drush
