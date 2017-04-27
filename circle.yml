@@ -10,9 +10,8 @@ test:
     - drush sa
     - mkdir $CIRCLE_TEST_REPORTS/behat
     - ./bin/behat
-    - which drush
-    - which .drush
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
     - composer global require drush/drush
+    - curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
