@@ -23,8 +23,8 @@ default:
       api_driver: 'drush'
       #drupal:
         #drupal_root: C:\Users\AJain\Sites\devdesktop\igcommerce_dev_2017-04-02T23-00-00_UTC_code
-      text:
-        username_field: "Username"
+      #text:
+        #username_field: "Username"
       drush:
         alias: 'igcommerce.aj-behat'
       region_map:
