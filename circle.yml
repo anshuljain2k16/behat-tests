@@ -27,6 +27,6 @@ dependencies:
     # Install Chrome driver
     - curl http://chromedriver.storage.googleapis.com/2.23/chromedriver_linux64.zip | gzip -dc > chromedriver
     - chmod +x chromedriver
-    - ./chromedriver
+    - './chromedriver': background: true
     
     - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
