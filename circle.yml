@@ -27,4 +27,10 @@ dependencies:
     # Install Chrome driver
     - curl http://chromedriver.storage.googleapis.com/2.23/chromedriver_linux64.zip | gzip -dc > chromedriver
     - chmod +x chromedriver
+
+    # Install Selenium
+    - curl http://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar > selenium-server-standalone.jar
+    - 'java -jar selenium-server-standalone.jar -trustAllSSLCertificates -Dwebdriver.chrome.driver=chromedriver':background: true
+    
     - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
+
