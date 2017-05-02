@@ -21,10 +21,15 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
    * context constructor through behat.yml.
    */
   public function __construct() {
-    $alias = '@mysite';
+    /**$alias = '@mysite';
     $driver = new DrushDriver($alias);
-    echo "IM HERE";
-    var_dump($driver);
+
+    $node = (object) array(
+      'type' => 'article',
+      'uid' => 1,
+      'title' => $driver->getRandom()->name(),
+    );
+    $driver->createNode($node);**/
   }
 
   /**
