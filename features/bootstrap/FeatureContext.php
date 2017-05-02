@@ -6,6 +6,7 @@ use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Assert\Assertion;
+use Drupal\Driver\DrushDriver;
 
 /**
 * Defines application features from the specific context.
@@ -20,6 +21,10 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
    * context constructor through behat.yml.
    */
   public function __construct() {
+    $alias = '@mysite';
+    $driver = new DrushDriver($alias);
+    echo "IM HERE";
+    var_dump($driver);
   }
 
   /**
