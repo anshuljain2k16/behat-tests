@@ -1,4 +1,4 @@
-@api @javascript
+@api
 Feature: terms
   Scenario: Create a term
    Given I am logged in as a user with the "administrator" role
