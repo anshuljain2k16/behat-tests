@@ -21,7 +21,7 @@ dependencies:
     # Install Terminus.
     - composer global require pantheon-systems/terminus
 
-    - composer global require drush-ops/behat-drush-endpoint
+    #- composer global require drush-ops/behat-drush-endpoint
     - composer global require drupal/drupal-driver 
 
     - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
