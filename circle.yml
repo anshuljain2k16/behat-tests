@@ -17,8 +17,6 @@ dependencies:
     - composer global require drush/drush:7.*
     - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-    - composer global require behat/behat
-
     # Install Terminus.
     - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus
     - cd $HOME/.drush/terminus
