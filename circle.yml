@@ -8,13 +8,14 @@ test:
     #- mv behat.local.yml.sample behat.local.yml
   override:
     #- mkdir $CIRCLE_TEST_REPORTS/behat
-    #- ./bin/behat
+    - behat
 dependencies: 
   pre: 
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
 
     # Install Drush.
-    #- composer global require drush/drush:7.*
+    - composer global require behat/behat:^3.3
+    - composer global require drush/drush:8.1.0
     - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
     # Install Terminus.
