@@ -19,12 +19,13 @@ dependencies:
     - composer global require symfony/dependency-injection:~2.7
     - composer global require behat/behat:^3.3
     - composer global require drush/drush:8.1.0
-    - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
     # Install Terminus.
     - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus
     - cd $HOME/.drush/terminus
     #- composer update --no-dev
-    - drush cc drush
+    #- drush cc drush
     - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
+    - export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 
