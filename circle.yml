@@ -22,8 +22,8 @@ dependencies:
     - composer require pantheon-systems/terminus
 
     # Install Terminus.
-    #- git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus
-    #- cd $HOME/.drush/terminus
+    - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus
+    - cd $HOME/.drush/terminus
     #- composer update --no-dev
     #- drush cc drush
     - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
