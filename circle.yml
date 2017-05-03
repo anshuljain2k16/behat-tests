@@ -14,8 +14,8 @@ dependencies:
     - echo "date.timezone = UTC" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
 
     # Install Drush.
-    - composer global require drush/drush:7.*
-    - export PATH="$HOME/.composer/vendor/bin:$PATH"
+    #- composer global require drush/drush:7.*
+    #- export PATH="$HOME/.composer/vendor/bin:$PATH"
 
     # Install Terminus.
     - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus
