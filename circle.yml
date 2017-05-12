@@ -33,8 +33,8 @@ dependencies:
     - cp pantheon.aliases.drushrc.php /home/ubuntu/.drush
     - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-    - ./vendor/bin/terminus auth:login --machine-token=lmISIz92U13XM1zVEKivNYXxSmbMZtG-Z3U_4spxWpDVq
+    - ./vendor/bin/terminus auth:login --machine-token=nG1NAiHcroBCfJGYchGR3Zs2jQCs5_0ZEzkoFFz5LPFXm
     - ./vendor/bin/terminus ssh-key:add ~/.ssh/id_rsa.pub
-    
+    - ssh-add -k ~/.ssh/id_rsa
 
 
