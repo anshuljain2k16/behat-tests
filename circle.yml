@@ -21,6 +21,7 @@ dependencies:
     - composer global require behat/behat:^3.3
     - composer global require drush/drush:8.1.0
     #- composer global require pantheon-systems/terminus
+    
 
     # Install Terminus.
     - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus
