@@ -14,6 +14,7 @@ use Behat\MinkExtension\Context\MinkContext;
 */
 class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext {
  
+  public $minkContext;
   /**
    * Initializes context.
    *
@@ -31,8 +32,8 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
       'title' => $driver->getRandom()->name(),
     );
     $driver->createNode($node);**/
-
-    $driver = $this->getSession()->getDriver();
+    $this->minkContext = $environment->getContext('Behat\MinkExtension\Context\MinkContext');
+    $driver = $this->minkContext->getDriver();
     $vocab = (object) array(
       'name' => 'url_builder'
     );
