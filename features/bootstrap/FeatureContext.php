@@ -7,6 +7,7 @@ use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Assert\Assertion;
 use Drupal\Driver\DrushDriver;
+use Behat\MinkExtension\Context\MinkContext;
 
 /**
 * Defines application features from the specific context.
@@ -30,6 +31,15 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
       'title' => $driver->getRandom()->name(),
     );
     $driver->createNode($node);**/
+
+    $driver = $this->getSession()->getDriver();
+    $vocab = (object) array(
+      'name' => 'url_builder'
+    );
+    $op = $driver->drush('behat', array('load_vocab', escapeshellarg(json_encode($vocab))), array());
+    echo "<pre>";
+    print_r($op);
+    exit;
   }
 
   /**
