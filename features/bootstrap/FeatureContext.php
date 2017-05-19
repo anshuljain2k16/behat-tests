@@ -40,7 +40,10 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
  */
   public function iTest(){
     echo "IN ITEST";
-    $driver = $this->getSession()->getDriver('drush');
+    $driver = $this->getSession()->getDriver();
+    $class = get_class($driver);
+    echo "<pre>";
+    print_r($class);
     $vocab = (object) array(
       'name' => 'url_builder'
     );
