@@ -32,8 +32,12 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
       'title' => $driver->getRandom()->name(),
     );
     $driver->createNode($node);**/
-    $this->minkContext = $environment->getContext('Behat\MinkExtension\Context\MinkContext');
-    $driver = $this->minkContext->getDriver();
+    
+  }
+
+  public function iTest(){
+    echo "IN ITEST";
+    $driver = $this->getSession()->getDriver();
     $vocab = (object) array(
       'name' => 'url_builder'
     );
