@@ -45,3 +45,4 @@ default:
    #formatters:
     #html:
     #  output_path: %paths.base%/build/html/behat
+    #  
